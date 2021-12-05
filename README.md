@@ -25,12 +25,12 @@
 
 ### 설치방법: 윈도우 파워능
 
-  cd insik  
+    cd insik  
     python -m venv .venv  
-  .venv/Scripts/activate.ps1
-  python -m pip install --upgrade pip
-  pip install -r requirements.txt
-  deactivate
+    .venv/Scripts/activate.ps1
+    python -m pip install --upgrade pip
+    pip install -r requirements.txt
+    deactivate
 
 ### 설치방법: 리눅스 우분투
 
