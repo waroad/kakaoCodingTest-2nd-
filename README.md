@@ -64,7 +64,7 @@ python main.py; deactivate;
 3. 다음 명령어를 입력한다.
 
 ```console
-cd insik
+$ cd insik
 source .venv/Scripts/activate
 python3 main.py; deactivate;
 ```
