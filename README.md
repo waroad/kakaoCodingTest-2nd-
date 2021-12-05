@@ -21,7 +21,7 @@
 
 ### 요구사항
 
-파이썬: 3.3 버전 이상  
+파이썬: Python 3.3 이상  
 환경: 윈도우 파워쉘 혹은 리눅스 우분투 혹은 WSL
 
 ### 설치방법: 윈도우 파워쉘
@@ -35,7 +35,7 @@ pip install -r requirements.txt
 deactivate
 ```
 
-### 설치방법: 리눅스 우분투
+### 설치방법: 리눅스 우분투 or WSL
 
 ```shell
 cd insik
@@ -58,7 +58,7 @@ cd insik
 python main.py; deactivate;
 ```
 
-### 실행방법: 리눅스 우분투
+### 실행방법: 리눅스 우분투 or WSL
 
 1. insik 디렉토리에 .env 파일을 만든다.
 2. .env 파일에 BASE_URL="[테스트 API URL]"과 X_AUTH_TOKEN="[X_AUTH_TOKEN 토큰]"을 쓴다.
