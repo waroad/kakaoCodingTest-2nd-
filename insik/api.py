@@ -2,24 +2,22 @@ import requests
 import json
 
 class KakaoBikeAPI:
-    def __init__(self, BASE_URL, X_AUTH_TOKEN, problem=1):
+    def __init__(self, BASE_URL: str, X_AUTH_TOKEN: str, problem: int=1):
         self.base_url = BASE_URL
         self.x_auth_token = X_AUTH_TOKEN
-        self.problem = 1
-        start_params = self.__start()
+        self.problem = problem
+
+    def start(self):
+        res = requests.post(url=f'{self.base_url}/start',
+                            headers={'X-Auth-Token': self.x_auth_token},
+                            json={'problem': self.problem})
+        start_params = res.json()
         self.auth_key = start_params['auth_key']
         self.time = start_params['time']
         self.auth_header = {'Authorization': self.auth_key, 'Content-Type': 'application/json'}
         self.status = "ready"
         self.failed_requests = 0
         self.distance = 0
-
-    def __start(self) -> dict[str, str]:
-        res = requests.post(url=f'{self.base_url}/start',
-                            headers={'X-Auth-Token': self.x_auth_token},
-                            json={'problem': self.problem})
-        
-        return res.json()
 
     def locations(self) -> list[tuple[int, int]]:
         '''
