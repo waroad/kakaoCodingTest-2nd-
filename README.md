@@ -16,12 +16,12 @@
 
 ## 원인식
 
-점수: 230점
+점수: 230점  
 최고점수: 230점
 
 ### 요구사항
 
-파이썬: Python 3.3 이상  
+파이썬: Python 3.9 이상  
 환경: 윈도우 파워쉘 혹은 리눅스 우분투 혹은 WSL
 
 ### 설치방법: 윈도우 파워쉘
@@ -30,20 +30,27 @@
 cd insik
 python -m venv .venv
 .venv/Scripts/activate.ps1
-python -m pip install --upgrade pip
+pip install --upgrade pip
 pip install -r requirements.txt
 deactivate
+cd ..
 ```
 
 ### 설치방법: 리눅스 우분투 or WSL
 
 ```shell
+sudo apt update
+sudo apt upgrade -y
+sudo apt install -y python3.9
+sudo apt install -y python3.9-venv
+
 cd insik
-python3 -m venv .venv
-source .venv/Scripts/activate
-python3 -m pip install --upgrade pip
+python3.9 -m venv .venv
+source .venv/bin/activate
+pip install --upgrade pip
 pip install -r requirements.txt
 deactivate
+cd ..
 ```
 
 ### 실행방법: 윈도우 파워쉘
@@ -55,7 +62,9 @@ deactivate
 ```shell
 cd insik
 .venv/Scripts/activate.ps1
-python main.py; deactivate;
+python main.py
+deactivate
+cd ..
 ```
 
 ### 실행방법: 리눅스 우분투 or WSL
@@ -66,6 +75,8 @@ python main.py; deactivate;
 
 ```shell
 cd insik
-source .venv/Scripts/activate
-python3 main.py; deactivate;
+source .venv/bin/activate
+python3.9 main.py
+deactivate
+cd ..
 ```
