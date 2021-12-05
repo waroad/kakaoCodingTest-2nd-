@@ -26,7 +26,7 @@
 
 ### 설치방법: 윈도우 파워쉘
 
-```powershell
+```shell
 cd insik
 python -m venv .venv
 .venv/Scripts/activate.ps1
@@ -37,7 +37,7 @@ deactivate
 
 ### 설치방법: 리눅스 우분투
 
-```bash
+```shell
 cd insik
 python3 -m venv .venv
 source .venv/Scripts/activate
@@ -52,7 +52,7 @@ deactivate
 2. .env 파일에 BASE_URL="[테스트 API URL]"과 X_AUTH_TOKEN="[X_AUTH_TOKEN 토큰]"을 쓴다.
 3. 다음 명령어를 입력한다.
 
-```powershell
+```shell
 cd insik
 .venv/Scripts/activate.ps1
 python main.py; deactivate;
@@ -64,7 +64,7 @@ python main.py; deactivate;
 2. .env 파일에 BASE_URL="[테스트 API URL]"과 X_AUTH_TOKEN="[X_AUTH_TOKEN 토큰]"을 쓴다.
 3. 다음 명령어를 입력한다.
 
-```bash
+```shell
 cd insik
 source .venv/Scripts/activate
 python3 main.py; deactivate;
