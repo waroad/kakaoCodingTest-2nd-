@@ -20,17 +20,17 @@
 
 ### 요구사항
 
-파이썬: 3.3 이상
+파이썬: 3.3 이상  
 환경: 윈도우 파워쉘 혹은 리눅스 우분투 혹은 WSL
 
 ### 설치방법: 윈도우 파워능
 
-cd insik  
- python -m venv .venv  
- .venv/Scripts/activate.ps1
-python -m pip install --upgrade pip
-pip install -r requirements.txt
-deactivate
+  cd insik  
+  python -m venv .venv  
+  .venv/Scripts/activate.ps1
+  python -m pip install --upgrade pip
+  pip install -r requirements.txt
+  deactivate
 
 ### 설치방법: 리눅스 우분투
 
