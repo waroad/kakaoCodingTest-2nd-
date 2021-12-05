@@ -26,23 +26,23 @@
 ### 설치방법: 윈도우 파워쉘
 
 ```console
-$ cd insik
-$ python -m venv .venv
-$ .venv/Scripts/activate.ps1
-$ python -m pip install --upgrade pip
-$ pip install -r requirements.txt
-$ deactivate
+cd insik
+python -m venv .venv
+.venv/Scripts/activate.ps1
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+deactivate
 ```
 
 ### 설치방법: 리눅스 우분투
 
 ```console
-$ cd insik
-$ python3 -m venv .venv
-$ source .venv/Scripts/activate
-$ python3 -m pip install --upgrade pip
-$ pip install -r requirements.txt
-$ deactivate
+cd insik
+python3 -m venv .venv
+source .venv/Scripts/activate
+python3 -m pip install --upgrade pip
+pip install -r requirements.txt
+deactivate
 ```
 
 ### 실행방법: 윈도우 파워쉘
@@ -52,9 +52,9 @@ $ deactivate
 3. 다음 명령어를 입력한다.
 
 ```console
-$ cd insik
-$ .venv/Scripts/activate.ps1
-$ python main.py; deactivate;
+cd insik
+.venv/Scripts/activate.ps1
+python main.py; deactivate;
 ```
 
 ### 실행방법: 리눅스 우분투
@@ -64,7 +64,7 @@ $ python main.py; deactivate;
 3. 다음 명령어를 입력한다.
 
 ```console
-$ cd insik
-$ source .venv/Scripts/activate
-$ python3 main.py; deactivate;
+cd insik
+source .venv/Scripts/activate
+python3 main.py; deactivate;
 ```
