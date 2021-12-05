@@ -26,6 +26,8 @@
 
 ### 설치방법: 윈도우 파워쉘
 
+1. 파이썬 3.9를 설치한다.
+
 ```shell
 cd insik
 python -m venv .venv
