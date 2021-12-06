@@ -2,6 +2,9 @@
 
 카카오 2차 코테 준비
 
+2021 카카오 신입공채 2차 온라인 코딩 테스트: https://tech.kakao.com/2021/02/16/2021-kakao-recruitment-round-2/  
+프로그래머스 2021 카카오 신입공채 2차 온라인 코딩테스트: https://programmers.co.kr/skill_check_assignments/67
+
 ## 남도하
 
 점수:

@@ -1,18 +1,13 @@
-import math
-from numpy import asarray, split, rot90
-
-def is_square(i: int) -> bool:
-    return i == math.isqrt(i) ** 2
+from util import is_square
 
 # fowrad declaration
-class Location: pass
 class Locations: pass
+class Location: pass
 
 class Locations:
-    def __init__(self, location_infos: list[tuple[int, int]]):
-        self.setvalues(location_infos)
-        self.__locations = list(map(lambda i: Location(i, self), 
-                                range(len(location_infos))))
+    def __init__(self, locations_info: list[tuple[int, int]]):
+        self.setvalues(locations_info)
+        self.__locations = [Location(i, self) for i in range(len(locations_info))]
         
     def xy(self, id: int) -> tuple[int, int]:
         return (id % 5, id // 5)
@@ -30,14 +25,19 @@ class Locations:
         x, y = subscript
         return self.get(x, y)
     
-    def setvalues(self, location_infos: list[tuple[int, int]]) -> None:
-        assert(is_square(len(location_infos)))
-        location_infos.sort(key= lambda tup: tup[0])
+    def setvalues(self, locations_info: list[tuple[int, int]]) -> None:
+        assert(is_square(len(locations_info)))
+        locations_info = sorted(locations_info, key= lambda tup: tup[0])
         
-        self.edge_length = math.isqrt(len(location_infos))
-        self.__values = list(map(lambda tup: tup[1], location_infos))   
+        self.edge_length = math.isqrt(len(locations_info))
+        self.__values = [bike_count for _, bike_count in location_info]
 
 class Location:
+    '''
+    Represents Location of kakao bike API
+    Do not create Location in hand. 
+    Use Locations to get the instance of Location
+    '''
     def __init__(self, id: int, locations: Locations):
         assert(id in range(locations.edge_length ** 2))
         self.__locations = locations
